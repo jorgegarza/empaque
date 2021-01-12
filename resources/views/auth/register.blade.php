@@ -40,6 +40,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="cel" class="col-md-4 col-form-label text-md-right">Celular con Whatsapp </label>
+
+                            <div class="col-md-6">
+                                <input id="cel" type="tel"  pattern="[0-9]{10}" class="form-control @error('cel') is-invalid @enderror" name="cel" value="{{ old('cel') }}" required autocomplete="cel">
+
+                                @error('cel')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
